@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    background: linear-gradient(150deg, #1994e1, #efefeb);
+    color: #333;
+}
+
+main {
+    width: 90%;
+    max-width: 100rem;
+    min-height: 95vh;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+header h1 {
+    line-height: 1.2;
+    font-size: 5rem;
+    font-family: 'Arial', sans-serif;
+}
+header h1::first-letter {
+    font-size: 8rem;
+    text-shadow: 2px 2px 0 #161ba0;
+}
+
+header p {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.openModal {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    cursor: pointer;
+    background-color: #f4d03f;
+
+    padding: 1rem;
+    border-radius: 50%;
+    transition: background 0.5s;
+}
+.openModal:hover {
+    background-color: #161ba0;
+}
+
+.noteList {
+    list-style: none;
+    padding: 2rem 0;
+
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.note {
+    min-height: 20rem;
+    background-color:rgb(252, 255, 114);
+}
+
+.note h2,
+.note p {
+    word-wrap: break-word;
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+.card-tools {
+    background: #161ba0;
+    min-height: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.card-tools span {
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 10rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid #888;
+    max-width: 45rem;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.noteForm {
+    max-width: 45rem;
+    width: 100%;
+    min-height: 20rem;
+    position: relative;
+    background-color: #ffdee9;
+    background-image: linear-gradient(#ffdee9 0%, #b5fffc 100%);
+}
+.noteForm-body {
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.noteForm-body input,
+.noteForm-body textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 0;
+    background: transparent;
+    outline-color: rgb(68, 202, 201);
+}
+
+.noteForm-body .title {
+    color: #000;
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #159880;
+}
+
+.noteForm-body .note {
+    resize: none;
+    font-size: 1.5rem;
+    font-family: inherit;
+    min-height: 15rem;
+}
+.noteForm-body .addNote {
+    position: absolute;
+    width: 20%;
+    height: 6rem;
+    bottom: -3rem;
+    left: 40%;
+    right: 40%;
+
+    background-color: #3ff460;
+    transform-origin: center top;
+    cursor: pointer;
+    border: 0;
+    outline-color: rgb(252, 255, 114);
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 2.5rem;
+    transition: all 0.5s;
+    box-shadow: 0 -10px 10px 0 rgba(255, 255, 255, 0.3);
+}
+.noteForm-body .addNote:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.6);
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+}
+.footer a {
+    color: #1e6558;
+    text-decoration-style: wavy;
+}

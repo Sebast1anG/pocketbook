@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pocketbook</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <h2 title="Add Note" class="openModal">➕</h2>
+
+                <h1>Pocketbook</h1>
+                <p>So that your notes are always with you.</p>
+            </header>
+            <ul class="noteList"></ul>
+        </main>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <form class="noteForm">
+                    <div class="card-tools">
+                    </div>
+                    <div class="noteForm-body">
+                        <input type="text" placeholder="Title" maxlength="32" class="title" />
+                        <textarea
+                            placeholder="Notes..."
+                            class="note"
+                            required
+                            maxlength="320"
+                            wrap="hard"
+                        ></textarea>
+
+                        <button type="submit" class="addNote">➕</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer class="footer">
+            This is a simple Notebook.
+        </footer>
+
+        <script src="app.js"></script>
+    </body>
+</html>
